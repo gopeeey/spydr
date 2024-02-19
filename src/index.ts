@@ -1,3 +1,10 @@
-import { parseRobotsTxt } from "./robots-txt-parser";
+import { crawl } from "./lib/crawler";
 
-parseRobotsTxt("https://medium.com");
+async function main() {
+  const data = await crawl(
+    "https://brightdata.com/blog/how-tos/robots-txt-for-web-scraping-guide"
+  );
+  console.log(data);
+}
+
+main().catch((e) => console.error(e));

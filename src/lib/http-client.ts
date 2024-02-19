@@ -22,7 +22,7 @@ export const fetchData = async ({
         timeout,
         timeoutErrorMessage: "The request timed out",
       });
-      return data;
+      return data as string;
     } catch (err) {
       // console.log(err);
       if (err instanceof AxiosError) {
