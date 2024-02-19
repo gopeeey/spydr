@@ -1,9 +1,7 @@
 import * as httpClient from "@lib/http-client";
-import * as utils from "@lib/utils";
 import { parseRobotsTxt } from "~/lib";
 
 const fetchDataSpy = jest.spyOn(httpClient, "fetchData");
-const getStrAfterSpy = jest.spyOn(utils, "getStrAfter");
 
 const txtData = `
 # allow TwitterBot to crawl lp
